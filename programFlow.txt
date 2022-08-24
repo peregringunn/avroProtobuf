@@ -1,0 +1,14 @@
+Import dataSet from site (JSON)
+serialize data set (avro) 
+Send dataSet to data store (This could be a simple file store or possibly a noSQL 
+	DB)
+serialize data set (ProtoBuf)
+
+Send data set to separate data-store
+
+if I use a simple file data-store could implement fairly easily
+Utilizing a noSQL DB might be more representative of a real world scenario.
+
+
+implement OTel for tracking
+
