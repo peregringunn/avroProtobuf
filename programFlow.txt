@@ -12,3 +12,18 @@ Utilizing a noSQL DB might be more representative of a real world scenario.
 
 implement OTel for tracking
 
+--------------------------------------------------------------------------------
+What needs to measured?
+- Process time for transmitting data.
+	- in-bound and out-bound for all three formats
+- Process time and compute cost for serializing and deserializing data
+- Transmit costs of serialized and unserialized 
+
+What testing should be performed?
+- test cases:
+	- Small data set with small number of fields (< 10)
+	- Small data set with large number of fields (>=10)
+	- Large data set with small number of fields
+	- Large data set with large number of fields
+	* possibly set up in both Java and C++
+	* utilizing data store

@@ -1,0 +1,221 @@
+Attaching to avroprotobuf_zipkin-all-in-one_1, prometheus, avroprotobuf_jaeger-all-in-one_1, avroprotobuf_otel-collector_1, avroprotobuf_demo-server_1
+[33mjaeger-all-in-one_1  |[0m 2022/08/31 18:23:27 maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+[32motel-collector_1     |[0m 2022/08/31 18:23:29 proto: duplicate proto type registered: jaeger.api_v2.PostSpansRequest
+[32motel-collector_1     |[0m 2022/08/31 18:23:29 proto: duplicate proto type registered: jaeger.api_v2.PostSpansResponse
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.177Z	info	builder/exporters_builder.go:255	Exporter was built.	{"kind": "exporter", "name": "jaeger"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.177Z	info	builder/exporters_builder.go:255	Exporter was built.	{"kind": "exporter", "name": "zipkin"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.177Z	info	builder/exporters_builder.go:255	Exporter was built.	{"kind": "exporter", "name": "prometheus"}
+[35mzipkin-all-in-one_1  |[0m 
+[35mzipkin-all-in-one_1  |[0m                   oo
+[35mzipkin-all-in-one_1  |[0m                  oooo
+[35mzipkin-all-in-one_1  |[0m                 oooooo
+[35mzipkin-all-in-one_1  |[0m                oooooooo
+[35mzipkin-all-in-one_1  |[0m               oooooooooo
+[35mzipkin-all-in-one_1  |[0m              oooooooooooo
+[35mzipkin-all-in-one_1  |[0m            ooooooo  ooooooo
+[35mzipkin-all-in-one_1  |[0m           oooooo     ooooooo
+[35mzipkin-all-in-one_1  |[0m          oooooo       ooooooo
+[35mzipkin-all-in-one_1  |[0m         oooooo   o  o   oooooo
+[35mzipkin-all-in-one_1  |[0m        oooooo   oo  oo   oooooo
+[35mzipkin-all-in-one_1  |[0m      ooooooo  oooo  oooo  ooooooo
+[35mzipkin-all-in-one_1  |[0m     oooooo   ooooo  ooooo  ooooooo
+[35mzipkin-all-in-one_1  |[0m    oooooo   oooooo  oooooo  ooooooo
+[35mzipkin-all-in-one_1  |[0m   oooooooo      oo  oo      oooooooo
+[35mzipkin-all-in-one_1  |[0m   ooooooooooooo oo  oo ooooooooooooo
+[35mzipkin-all-in-one_1  |[0m       oooooooooooo  oooooooooooo
+[35mzipkin-all-in-one_1  |[0m           oooooooo  oooooooo
+[35mzipkin-all-in-one_1  |[0m               oooo  oooo
+[35mzipkin-all-in-one_1  |[0m 
+[35mzipkin-all-in-one_1  |[0m      ________ ____  _  _____ _   _
+[35mzipkin-all-in-one_1  |[0m     |__  /_ _|  _ \| |/ /_ _| \ | |
+[35mzipkin-all-in-one_1  |[0m       / / | || |_) | ' / | ||  \| |
+[35mzipkin-all-in-one_1  |[0m      / /_ | ||  __/| . \ | || |\  |
+[35mzipkin-all-in-one_1  |[0m     |____|___|_|   |_|\_\___|_| \_|
+[35mzipkin-all-in-one_1  |[0m 
+[35mzipkin-all-in-one_1  |[0m :: version 2.23.18 :: commit 4b71677 ::
+[35mzipkin-all-in-one_1  |[0m 
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.202Z caller=main.go:495 level=info msg="No time or size retention was set so using the default time retention" duration=15d
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.202Z caller=main.go:539 level=info msg="Starting Prometheus Server" mode=server version="(version=2.38.0, branch=HEAD, revision=818d6e60888b2a3ea363aee8a9828c7bafd73699)"
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.202Z caller=main.go:544 level=info build_context="(go=go1.18.5, user=root@e6b781f65453, date=20220816-13:23:14)"
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.202Z caller=main.go:545 level=info host_details="(Linux 5.10.16.3-microsoft-standard-WSL2 #1 SMP Fri Apr 2 22:23:49 UTC 2021 x86_64 1729cbaf2aa6 localdomain)"
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.202Z caller=main.go:546 level=info fd_limits="(soft=1048576, hard=1048576)"
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.202Z caller=main.go:547 level=info vm_limits="(soft=unlimited, hard=unlimited)"
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.178Z	info	builder/exporters_builder.go:255	Exporter was built.	{"kind": "exporter", "name": "logging"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.178Z	info	builder/pipelines_builder.go:224	Pipeline was built.	{"kind": "pipeline", "name": "traces"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.178Z	info	builder/pipelines_builder.go:224	Pipeline was built.	{"kind": "pipeline", "name": "metrics"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.178Z	info	builder/receivers_builder.go:226	Receiver was built.	{"kind": "receiver", "name": "otlp", "datatype": "traces"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.178Z	info	builder/receivers_builder.go:226	Receiver was built.	{"kind": "receiver", "name": "otlp", "datatype": "metrics"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.178Z	info	service/telemetry.go:109	Setting up own telemetry...
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.179Z	info	service/telemetry.go:129	Serving Prometheus metrics	{"address": ":8888", "level": "basic", "service.instance.id": "4f4e3741-cba5-45af-ad49-d0d9886e0047", "service.version": "latest"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	service/service.go:76	Starting extensions...
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	extensions/extensions.go:38	Extension is starting...	{"kind": "extension", "name": "pprof"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	pprofextension@v0.51.0/pprofextension.go:71	Starting net/http/pprof server	{"kind": "extension", "name": "pprof", "config": {"TCPAddr":{"Endpoint":":1888"},"BlockProfileFraction":0,"MutexProfileFraction":0,"SaveToFile":""}}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	extensions/extensions.go:42	Extension started.	{"kind": "extension", "name": "pprof"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	extensions/extensions.go:38	Extension is starting...	{"kind": "extension", "name": "zpages"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	zpagesextension/zpagesextension.go:40	Register Host's zPages	{"kind": "extension", "name": "zpages"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	zpagesextension/zpagesextension.go:53	Starting zPages extension	{"kind": "extension", "name": "zpages", "config": {"TCPAddr":{"Endpoint":":55679"}}}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	extensions/extensions.go:42	Extension started.	{"kind": "extension", "name": "zpages"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	extensions/extensions.go:38	Extension is starting...	{"kind": "extension", "name": "health_check"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.180Z	info	healthcheckextension@v0.51.0/healthcheckextension.go:44	Starting health_check extension	{"kind": "extension", "name": "health_check", "config": {"Port":0,"TCPAddr":{"Endpoint":"0.0.0.0:13133"},"Path":"/","CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5}}}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.181Z	info	extensions/extensions.go:42	Extension started.	{"kind": "extension", "name": "health_check"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.181Z	info	service/service.go:81	Starting exporters...
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.181Z	info	builder/exporters_builder.go:40	Exporter is starting...	{"kind": "exporter", "name": "logging"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.181Z	info	builder/exporters_builder.go:48	Exporter started.	{"kind": "exporter", "name": "logging"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.181Z	info	builder/exporters_builder.go:40	Exporter is starting...	{"kind": "exporter", "name": "jaeger"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.3766053,"caller":"flags/service.go:119","msg":"Mounting metrics handler on admin server","route":"/metrics"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.376741,"caller":"flags/service.go:125","msg":"Mounting expvar handler on admin server","route":"/debug/vars"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.3770292,"caller":"flags/admin.go:128","msg":"Mounting health check on admin server","route":"/"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.3771377,"caller":"flags/admin.go:141","msg":"Starting admin HTTP server","http-addr":":14269"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.377199,"caller":"flags/admin.go:120","msg":"Admin server started","http.host-port":"[::]:14269","health-status":"unavailable"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.3890038,"caller":"memory/factory.go:66","msg":"Memory storage initialized","configuration":{"MaxTraces":0}}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.3900874,"caller":"static/strategy_store.go:138","msg":"Loading sampling strategies","filename":"/etc/jaeger/sampling_strategies.json"}
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.208Z caller=web.go:553 level=info component=web msg="Start listening for connections" address=0.0.0.0:9090
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.209Z caller=main.go:976 level=info msg="Starting TSDB ..."
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.212Z caller=tls_config.go:195 level=info component=web msg="TLS is disabled." http2=false
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.220Z caller=head.go:495 level=info component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.220Z caller=head.go:538 level=info component=tsdb msg="On-disk memory mappable chunks replay completed" duration=4µs
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.220Z caller=head.go:544 level=info component=tsdb msg="Replaying WAL, this may take a while"
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.229Z caller=head.go:615 level=info component=tsdb msg="WAL segment loaded" segment=0 maxSegment=3
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.230Z caller=head.go:615 level=info component=tsdb msg="WAL segment loaded" segment=1 maxSegment=3
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.233Z caller=head.go:615 level=info component=tsdb msg="WAL segment loaded" segment=2 maxSegment=3
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.234Z caller=head.go:615 level=info component=tsdb msg="WAL segment loaded" segment=3 maxSegment=3
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.234Z caller=head.go:621 level=info component=tsdb msg="WAL replay completed" checkpoint_replay_duration=62.6µs wal_replay_duration=14.484ms total_replay_duration=14.8072ms
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.238Z caller=main.go:997 level=info fs_type=EXT4_SUPER_MAGIC
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4752848,"caller":"channelz/funcs.go:340","msg":"[core][Server #1] Server created","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4755177,"caller":"server/grpc.go:104","msg":"Starting jaeger-collector gRPC server","grpc.host-port":"[::]:14250"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4755774,"caller":"server/http.go:48","msg":"Starting jaeger-collector HTTP server","http host-port":":14268"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4756503,"caller":"channelz/funcs.go:340","msg":"[core][Server #1 ListenSocket #2] ListenSocket created","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4759226,"caller":"server/zipkin.go:51","msg":"Not listening for Zipkin HTTP traffic, port not configured"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.475999,"caller":"grpc/builder.go:73","msg":"Agent requested insecure grpc connection to collector(s)"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4760566,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] Channel created","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.476113,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] original dial target is: \":14250\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4761517,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] dial target \":14250\" parse failed: parse \":14250\": missing protocol scheme","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.476175,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] fallback to scheme \"passthrough\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4762173,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] parsed dial target is: {Scheme:passthrough Authority: Endpoint::14250 URL:{Scheme:passthrough Opaque: User: Host: Path:/:14250 RawPath: ForceQuery:false RawQuery: Fragment: RawFragment:}}","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.476241,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] Channel authority set to \"localhost:14250\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.476429,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] Resolver state updated: {\n  \"Addresses\": [\n    {\n      \"Addr\": \":14250\",\n      \"ServerName\": \"\",\n      \"Attributes\": null,\n      \"BalancerAttributes\": null,\n      \"Type\": 0,\n      \"Metadata\": null\n    }\n  ],\n  \"ServiceConfig\": null,\n  \"Attributes\": null\n} (resolver returned new addresses)","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4764748,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] Channel switches to new LB policy \"round_robin\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4765573,"caller":"grpclog/component.go:55","msg":"[balancer]base.baseBalancer: got new ClientConn state: {{[{\n  \"Addr\": \":14250\",\n  \"ServerName\": \"\",\n  \"Attributes\": null,\n  \"BalancerAttributes\": null,\n  \"Type\": 0,\n  \"Metadata\": null\n}] <nil> <nil>} <nil>}","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4765916,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3 SubChannel #4] Subchannel created","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4766605,"caller":"grpclog/component.go:71","msg":"[roundrobin]roundrobinPicker: Build called with info: {map[]}","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4766817,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] Channel Connectivity change to CONNECTING","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4768233,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3 SubChannel #4] Subchannel Connectivity change to CONNECTING","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.476866,"caller":"grpc/builder.go:113","msg":"Checking connection to collector"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.476897,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3 SubChannel #4] Subchannel picks a new address \":14250\" to connect","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4769511,"caller":"grpc/builder.go:124","msg":"Agent collector connection state change","dialTarget":":14250","status":"CONNECTING"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4770103,"caller":"grpclog/component.go:71","msg":"[balancer]base.baseBalancer: handle SubConn state change: 0xc0004e4f50, CONNECTING","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4775488,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3 SubChannel #4] Subchannel Connectivity change to READY","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4775767,"caller":"grpclog/component.go:71","msg":"[balancer]base.baseBalancer: handle SubConn state change: 0xc0004e4f50, READY","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4776433,"caller":"grpclog/component.go:71","msg":"[roundrobin]roundrobinPicker: Build called with info: {map[0xc0004e4f50:{{\n  \"Addr\": \":14250\",\n  \"ServerName\": \"\",\n  \"Attributes\": null,\n  \"BalancerAttributes\": null,\n  \"Type\": 0,\n  \"Metadata\": null\n}}]}","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4776645,"caller":"channelz/funcs.go:340","msg":"[core][Channel #3] Channel Connectivity change to READY","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.47768,"caller":"grpc/builder.go:124","msg":"Agent collector connection state change","dialTarget":":14250","status":"READY"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4779165,"caller":"./main.go:256","msg":"Starting agent"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4780467,"caller":"querysvc/query_service.go:135","msg":"Archive storage not created","reason":"archive storage not supported"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4780703,"caller":"app/flags.go:136","msg":"Archive storage not initialized"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4780872,"caller":"app/agent.go:69","msg":"Starting jaeger-agent HTTP server","http-port":5778}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4784715,"caller":"channelz/funcs.go:340","msg":"[core][Server #7] Server created","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.478538,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] Channel created","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4785538,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] original dial target is: \":16685\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4785707,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] dial target \":16685\" parse failed: parse \":16685\": missing protocol scheme","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.478582,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] fallback to scheme \"passthrough\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4786048,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] parsed dial target is: {Scheme:passthrough Authority: Endpoint::16685 URL:{Scheme:passthrough Opaque: User: Host: Path:/:16685 RawPath: ForceQuery:false RawQuery: Fragment: RawFragment:}}","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4786186,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] Channel authority set to \"localhost:16685\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.478691,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] Resolver state updated: {\n  \"Addresses\": [\n    {\n      \"Addr\": \":16685\",\n      \"ServerName\": \"\",\n      \"Attributes\": null,\n      \"BalancerAttributes\": null,\n      \"Type\": 0,\n      \"Metadata\": null\n    }\n  ],\n  \"ServiceConfig\": null,\n  \"Attributes\": null\n} (resolver returned new addresses)","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4787335,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] Channel switches to new LB policy \"pick_first\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.478761,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8 SubChannel #9] Subchannel created","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4789627,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8 SubChannel #9] Subchannel Connectivity change to CONNECTING","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4791741,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8 SubChannel #9] Subchannel picks a new address \":16685\" to connect","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.479424,"caller":"grpclog/component.go:71","msg":"[core]pickfirstBalancer: UpdateSubConnState: 0xc000238ac0, {CONNECTING <nil>}","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4795308,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] Channel Connectivity change to CONNECTING","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4795444,"caller":"app/static_handler.go:181","msg":"UI config path not provided, config file will not be watched"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4796977,"caller":"app/server.go:217","msg":"Query server started","http_addr":"[::]:16686","grpc_addr":"[::]:16685"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4797251,"caller":"healthcheck/handler.go:129","msg":"Health Check state change","status":"ready"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4797595,"caller":"app/server.go:300","msg":"Starting GRPC server","port":16685,"addr":":16685"}
+[33mjaeger-all-in-one_1  |[0m {"level":"warn","ts":1661970207.4797738,"caller":"channelz/funcs.go:342","msg":"[core][Channel #8 SubChannel #9] grpc: addrConn.createTransport failed to connect to {\n  \"Addr\": \":16685\",\n  \"ServerName\": \"localhost:16685\",\n  \"Attributes\": null,\n  \"BalancerAttributes\": null,\n  \"Type\": 0,\n  \"Metadata\": null\n}. Err: connection error: desc = \"transport: Error while dialing dial tcp :16685: connect: connection refused\"","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4798045,"caller":"app/server.go:281","msg":"Starting HTTP server","port":16686,"addr":":16686"}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4798088,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8 SubChannel #9] Subchannel Connectivity change to TRANSIENT_FAILURE","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.479869,"caller":"grpclog/component.go:71","msg":"[core]pickfirstBalancer: UpdateSubConnState: 0xc000238ac0, {TRANSIENT_FAILURE connection error: desc = \"transport: Error while dialing dial tcp :16685: connect: connection refused\"}","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.479784,"caller":"channelz/funcs.go:340","msg":"[core][Server #7 ListenSocket #10] ListenSocket created","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970207.4798942,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] Channel Connectivity change to TRANSIENT_FAILURE","system":"grpc","grpc_log":true}
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.238Z caller=main.go:1000 level=info msg="TSDB started"
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.239Z caller=main.go:1181 level=info msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.181Z	info	jaegerexporter@v0.51.0/exporter.go:186	State of the connection with the Jaeger Collector backend	{"kind": "exporter", "name": "jaeger", "state": "IDLE"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/exporters_builder.go:48	Exporter started.	{"kind": "exporter", "name": "jaeger"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/exporters_builder.go:40	Exporter is starting...	{"kind": "exporter", "name": "zipkin"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/exporters_builder.go:48	Exporter started.	{"kind": "exporter", "name": "zipkin"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/exporters_builder.go:40	Exporter is starting...	{"kind": "exporter", "name": "prometheus"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/exporters_builder.go:48	Exporter started.	{"kind": "exporter", "name": "prometheus"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	service/service.go:86	Starting processors...
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/pipelines_builder.go:54	Pipeline is starting...	{"kind": "pipeline", "name": "traces"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/pipelines_builder.go:65	Pipeline is started.	{"kind": "pipeline", "name": "traces"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/pipelines_builder.go:54	Pipeline is starting...	{"kind": "pipeline", "name": "metrics"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/pipelines_builder.go:65	Pipeline is started.	{"kind": "pipeline", "name": "metrics"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	service/service.go:91	Starting receivers...
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/receivers_builder.go:68	Receiver is starting...	{"kind": "receiver", "name": "otlp"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	otlpreceiver/otlp.go:70	Starting GRPC server on endpoint 0.0.0.0:4317	{"kind": "receiver", "name": "otlp"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	builder/receivers_builder.go:73	Receiver started.	{"kind": "receiver", "name": "otlp"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	healthcheck/handler.go:129	Health Check state change	{"kind": "extension", "name": "health_check", "status": "ready"}
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	service/collector.go:251	Starting otelcontribcol...	{"Version": "40d055d", "NumCPU": 8}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970208.4805796,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8 SubChannel #9] Subchannel Connectivity change to IDLE","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970208.480712,"caller":"grpclog/component.go:71","msg":"[core]pickfirstBalancer: UpdateSubConnState: 0xc000238ac0, {IDLE connection error: desc = \"transport: Error while dialing dial tcp :16685: connect: connection refused\"}","system":"grpc","grpc_log":true}
+[33mjaeger-all-in-one_1  |[0m {"level":"info","ts":1661970208.480736,"caller":"channelz/funcs.go:340","msg":"[core][Channel #8] Channel Connectivity change to IDLE","system":"grpc","grpc_log":true}
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.249Z caller=main.go:1218 level=info msg="Completed loading of configuration file" filename=/etc/prometheus/prometheus.yml totalDuration=10.5255ms db_storage=1.2µs remote_storage=1.6µs web_handler=500ns query_engine=1.2µs scrape=1.2706ms scrape_sd=41.5µs notify=1.2µs notify_sd=3.1µs rules=1.5µs tracing=7.3µs
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.249Z caller=main.go:961 level=info msg="Server is ready to receive web requests."
+[32motel-collector_1     |[0m 2022-08-31T18:23:30.182Z	info	service/collector.go:146	Everything is ready. Begin running and processing data.
+[32motel-collector_1     |[0m 2022-08-31T18:23:31.182Z	info	jaegerexporter@v0.51.0/exporter.go:186	State of the connection with the Jaeger Collector backend	{"kind": "exporter", "name": "jaeger", "state": "READY"}
+[34mprometheus           |[0m ts=2022-08-31T18:23:27.249Z caller=manager.go:941 level=info component="rule manager" msg="Starting rule manager..."
+[35mzipkin-all-in-one_1  |[0m 2022-08-31 18:23:31.671  INFO [/] 1 --- [oss-http-*:9411] c.l.a.s.Server                           : Serving HTTP at /0.0.0.0:9411 - http://127.0.0.1:9411/
+[36mdemo-server_1        |[0m [otel.javaagent 2022-08-31 18:23:32:107 +0000] [main] INFO io.opentelemetry.javaagent.tooling.VersionLogger - opentelemetry-javaagent - version: 1.17.0
+[36mdemo-server_1        |[0m OpenTelemetry Javaagent failed to start
+[36mdemo-server_1        |[0m io.opentelemetry.sdk.autoconfigure.spi.ConfigurationException: OTLP endpoint must be a valid URL: otel-collector:4317
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.OtlpConfigUtil.validateEndpoint(OtlpConfigUtil.java:192)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.OtlpConfigUtil.configureOtlpExporterBuilder(OtlpConfigUtil.java:65)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.MetricExporterConfiguration.configureOtlpMetrics(MetricExporterConfiguration.java:120)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.MetricExporterConfiguration.configureExporter(MetricExporterConfiguration.java:47)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.MeterProviderConfiguration.lambda$configureMetricReaders$0(MeterProviderConfiguration.java:70)
+[36mdemo-server_1        |[0m 	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+[36mdemo-server_1        |[0m 	at java.util.Collections$2.tryAdvance(Collections.java:4719)
+[36mdemo-server_1        |[0m 	at java.util.Collections$2.forEachRemaining(Collections.java:4727)
+[36mdemo-server_1        |[0m 	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+[36mdemo-server_1        |[0m 	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+[36mdemo-server_1        |[0m 	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+[36mdemo-server_1        |[0m 	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+[36mdemo-server_1        |[0m 	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.MeterProviderConfiguration.configureMetricReaders(MeterProviderConfiguration.java:72)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.MeterProviderConfiguration.configureMeterProvider(MeterProviderConfiguration.java:46)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:338)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.javaagent.tooling.OpenTelemetryInstaller.installOpenTelemetrySdk(OpenTelemetryInstaller.java:42)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.javaagent.tooling.AgentInstaller.installBytebuddyAgent(AgentInstaller.java:116)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.javaagent.tooling.AgentInstaller.installBytebuddyAgent(AgentInstaller.java:95)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.javaagent.tooling.AgentStarterImpl.internalStart(AgentStarterImpl.java:89)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.javaagent.tooling.AgentStarterImpl.start(AgentStarterImpl.java:68)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.javaagent.bootstrap.AgentInitializer.initialize(AgentInitializer.java:35)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.javaagent.OpenTelemetryAgent.startAgent(OpenTelemetryAgent.java:57)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.javaagent.OpenTelemetryAgent.premain(OpenTelemetryAgent.java:45)
+[36mdemo-server_1        |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[36mdemo-server_1        |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[36mdemo-server_1        |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[36mdemo-server_1        |[0m 	at java.lang.reflect.Method.invoke(Method.java:498)
+[36mdemo-server_1        |[0m 	at sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:386)
+[36mdemo-server_1        |[0m 	at sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:401)
+[36mdemo-server_1        |[0m Caused by: java.net.MalformedURLException: unknown protocol: otel-collector
+[36mdemo-server_1        |[0m 	at java.net.URL.<init>(URL.java:618)
+[36mdemo-server_1        |[0m 	at java.net.URL.<init>(URL.java:508)
+[36mdemo-server_1        |[0m 	at java.net.URL.<init>(URL.java:457)
+[36mdemo-server_1        |[0m 	at io.opentelemetry.sdk.autoconfigure.OtlpConfigUtil.validateEndpoint(OtlpConfigUtil.java:190)
+[36mdemo-server_1        |[0m 	... 29 more
+[36mdemo-server_1        |[0m [main] INFO io.javalin.Javalin - 
+[36mdemo-server_1        |[0m        __                      __ _            __ __
+[36mdemo-server_1        |[0m       / /____ _ _   __ ____ _ / /(_)____      / // /
+[36mdemo-server_1        |[0m  __  / // __ `/| | / // __ `// // // __ \    / // /_
+[36mdemo-server_1        |[0m / /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+[36mdemo-server_1        |[0m \____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+[36mdemo-server_1        |[0m 
+[36mdemo-server_1        |[0m           https://javalin.io/documentation
+[36mdemo-server_1        |[0m 
+[36mdemo-server_1        |[0m [main] INFO org.eclipse.jetty.util.log - Logging initialized @909ms to org.eclipse.jetty.util.log.Slf4jLog
+[36mdemo-server_1        |[0m [main] INFO io.javalin.Javalin - Starting Javalin ...
+[36mdemo-server_1        |[0m [main] INFO io.javalin.Javalin - You are running Javalin 4.6.4 (released July 8, 2022).
+[36mdemo-server_1        |[0m [main] INFO io.javalin.Javalin - Listening on http://localhost:7500/
+[36mdemo-server_1        |[0m [main] INFO io.javalin.Javalin - Javalin started in 335ms \o/
+Gracefully stopping... (press Ctrl+C again to force)

@@ -1,0 +1,77 @@
+{"namespace": "com.hitachivantara.avro",
+"type": "record",
+"name": "Airlines",
+"fields": [
+	{"name": "Airport",
+	"type": {
+		"type": "record",
+		"name": "AirportRecord",
+		"fields": [
+			{"name": "code", "type": "string"},
+			{"name": "name", "type": "string"}
+		]}
+	},
+	{"name": "Time",
+	"type": {
+		"type": "record",
+		"name": "TimeRecord",
+		"fields": [
+			{"name": "Label", "type": "string"},
+			{"name": "Month", "type": "long"},
+			{"name": "MonthName", "type": "string"},
+			{"name": "Year", "type": "long"}
+		]}
+	},
+	{"name": "Statistics",
+	"type": {
+		"type": "record",
+		"name": "StatisticsRecord",
+		"fields": [
+			{"name": "NumberOfDelays",
+			"type": {
+				"type": "record",
+				"name": "NumberOfDelaysRecord",
+				"fields": [
+					{"name": "Carrier", "type": "long"},
+					{"name": "LateAircraft", "type": "long"},
+					{"name": "NationalAviationSystem", "type": "long"},
+					{"name": "Security", "type": "long"},
+					{"name": "Weather", "type": "long"}
+				]
+			}},
+			{"name": "Carriers",
+			"type": {
+				"type": "record",
+				"name": "CarriersRecord",
+				"fields": [
+					{"name": "Names",
+					"type":  "string"
+					},
+					{"name": "Total", "type": "long"}]}},
+			{"name": "Flights",
+			"type": {
+				"type": "record",
+				"name": "FlightsRecord",
+				"fields": [
+					{"name": "Cancelled", "type": "long"},
+					{"name": "Delayed", "type": "long"},
+					{"name": "Diverted", "type": "long"},
+					{"name": "OnTime", "type": "long"},
+					{"name": "Total", "type": "long"}
+				]}},
+			{"name": "MinutesDelayed",
+			"type": {
+				"type": "record",
+				"name": "MinutesDelayedRecord",
+				"fields": [
+					{"name": "Carrier", "type": "long"},
+					{"name": "LateAircraft", "type": "long"},
+					{"name": "NationalAviationSystem", "type": "long"},
+					{"name": "Security", "type": "long"},
+					{"name": "Total", "type": "long"},
+					{"name": "Weather", "type": "long"}
+				]
+			}}]
+		}
+	}
+]}		

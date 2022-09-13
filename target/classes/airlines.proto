@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+message Airlines {
+
+    message Airport {
+        string Code = 1;
+        string Name = 2;
+    }
+
+    message Time {
+        string Label = 1;
+        uint32 Month = 2;
+        string MonthName = 3;
+        uint32 Year = 4;
+    }
+
+    message NumberOfDelays {
+        uint32 Carrier = 1;
+        uint32 LateAircraft = 2;
+        uint32 NationalAviationSystem = 3;
+        uint32 Security = 4;
+        uint32 Weather = 5;
+    }
+
+    message Carriers {
+        string Names = 1;
+        uint32 Total = 2;
+    }
+
+    message Flights {
+        uint32 Cancelled = 1;
+        uint32 Delayed = 2;
+        uint32 Diverted = 3;
+        uint32 OnTime = 4;
+        uint32 Total = 5;
+    }
+
+    message MinutesDelayed {
+        uint32 Carrier = 1;
+        uint32 LateAircraft = 2;
+        uint32 NationalAviationSystem = 3;
+        uint32 Security = 4;
+        uint32 Total = 5;
+        uint32 Weather = 6;
+    }
+
+    message Statistics {
+        NumberOfDelays numberOfDelays = 1;
+        Carriers Carriers = 2;
+        Flights Flights = 3;
+        MinutesDelayed minutesDelayed = 4;
+    }
+
+    Airport airport = 1;
+    Time time = 2;
+    Statistics statistics = 3;
+}

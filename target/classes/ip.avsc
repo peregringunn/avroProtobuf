@@ -1,0 +1,7 @@
+{"namespace": "com.hitachivantara.avro",
+ "type": "record",
+ "name": "IP",
+ "fields": [
+     {"name": "origin", "type": "string"}
+ ]
+}

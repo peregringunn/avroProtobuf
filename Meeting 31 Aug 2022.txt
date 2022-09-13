@@ -1,0 +1,16 @@
+Meeting notes 31 Aug 2022:
+
+Figure out how to take in any size message.
+
+Schema automation.
+
+possibly use a stream handeler like kafka.
+
+possibly write a method to auto generate a schema from json object.
+
+possibly write a method to auto generate a new class on the fly.
+
+Maybe create a fresh application to handle generic messages.
+
+Sai: "not useful if has to manually configured"
+

@@ -1,0 +1,89 @@
+{
+	"namespace": "com.hitachivantara.avro",
+	"type": "record",
+	"name": "Event",
+	"fields": [
+		{"name": "id",
+		"type": "long"},
+		{"name": "type",
+		"type": "string"},
+		{"name": "actor",
+		"type": {
+			"type": "record",
+			"name": "actorRecord",
+			"fields": [
+				{"name": "id",
+				"type": "long"},
+				{"name": "login",
+				"type": "string"},
+				{"name": "display_login",
+				"type": "string"},
+				{"name": "gravatar_id",
+				"type": "string"},
+				{"name": "url",
+				"type": "string"},
+				{"name": "avatar_url",
+				"type": "string"}]
+			}
+		},
+		{"name": "repo",
+		"type": {
+			"type": "record",
+			"name": "repoRecord",
+			"fields": [
+				{"name": "id",
+				"type": "long"},
+				{"name": "name",
+				"type": "string"},
+				{"name": "url",
+				"type": "string"}
+			]},
+		"name": "payload",
+		"type":{
+			"type": "record",
+			"name": "payloadRecord",
+			"fields": [
+				{"name": "push_id",
+				"type": "long"},
+				{"name": "size",
+				"type": "long"},
+				{"name": "distinct_size",
+				"type": "long"},
+				{"name": "ref",
+				"type": "string"},
+				{"name": "head",
+				"type": "string"},
+				{"name": "before",
+				"type": "string"},
+				{"name": "commits",
+				"type": {
+					"type": "record",
+					"name": "commitsRecord",
+					"fields": [
+						{"name": "sha",
+						"type": "string"},
+						{"name": "author",
+						"type": {
+							"type": "record",
+							"name": "authorRecord",
+							"fields": [
+								{"name": "email",
+								"type": "string"},
+								{"name": "name",
+								"type": "string"}]}
+						}
+				]},
+					"name": "message",
+					"type": "string"},
+					{"name": "distinct",
+					"type": "boolean"},
+					{"name": "url",
+					"type": "string"}
+				]}},
+		{"name": "public",
+		"type": "boolean"},
+		{"name": "created_at",
+		"type": "string"}
+		]}
+	]
+}

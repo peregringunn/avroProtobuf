@@ -1,0 +1,33 @@
+{"namespace": "com.hitachivantara.avro",
+"type": "record",
+"name": "nobelPrize",
+"fields": [
+	{"name": "prizes",
+	"type": {
+		"type": "record",
+		"name": "prizesRecord",
+		"fields": [
+			{"name": "year",
+			"type": "long"},
+			{"name": "category",
+			"type": "string"},
+			{"name": "laureates",
+			"type": {
+				"type": "record",
+				"name": "laureatesRecord",
+				"fields":[
+					{"name": "id",
+					"type": "long"},
+					{"name": "firstname",
+					"type": "string"},
+					{"name": "surname",
+					"type": "string"},
+					{"name": "motivation",
+					"type": "string"},
+					{"name": "share",
+					"type": "long"}
+				]}
+			}	
+		]}
+	}
+]}

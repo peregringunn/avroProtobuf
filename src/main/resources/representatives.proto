@@ -1,0 +1,66 @@
+syntax = "proto3";
+package com.hitachivantara.proto;
+option java_package = "com.hitachivantara.proto";
+
+import "google/protobuf/any.proto";
+
+message SomeMessage {
+
+    message Meta {
+        uint32 limit = 1;
+        uint32 offset = 2;
+        uint32 total_count = 3;
+    }
+
+    message Extra {
+        string address = 1;
+        string office = 2;
+        string rss_url = 3;
+    }
+
+    message Person {
+        string bioguideid = 1;
+        string birthday = 2;
+        uint32 cspanid = 3;
+        string firstname = 4;
+        string gender = 5;
+        string gender_label = 6;
+        string lastname = 7;
+        string link = 8;
+        string middlename = 9;
+        string name = 10;
+        string namemod = 11;
+        string nickname = 12;
+        string osid = 13;
+        string pvsid = 14;
+        string sortname = 15;
+        string twitterid = 16;
+        string youtubeid = 17;
+    }
+
+    message Objects {
+        google.protobuf.Any caucus = 1;
+        repeated uint32 congress_numbers = 2;
+        bool current = 3;
+        string description = 4;
+        uint32 district = 5;
+        string enddate = 6;
+        Extra extra = 7;
+        google.protobuf.Any leadership_title = 8;
+        string party = 9;
+        Person person = 10;
+        string phone = 11;
+        string role_type = 12;
+        string role_type_label = 13;
+        google.protobuf.Any senator_class = 14;
+        google.protobuf.Any senator_rank = 15;
+        string startdate = 16;
+        string state = 17;
+        string title = 18;
+        string title_long = 19;
+        string website = 20;
+    }
+
+    Meta meta = 1;
+    repeated Objects objects = 2;
+}

@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+message eventMessages {
+
+    message Actor {
+        uint32 id = 1;
+        string login = 2;
+        string display_login = 3;
+        string gravatar_id = 4;
+        string url = 5;
+        string avatar_url = 6;
+    }
+
+    message Repo {
+        uint32 id = 1;
+        string name = 2;
+        string url = 3;
+    }
+
+    message Author {
+        string email = 1;
+        string name = 2;
+    }
+
+    message Commits {
+        string sha = 1;
+        Author author = 2;
+        string message = 3;
+        bool distinct = 4;
+        string url = 5;
+    }
+
+    message Payload {
+        uint64 push_id = 1;
+        uint32 size = 2;
+        uint32 distinct_size = 3;
+        string ref = 4;
+        string head = 5;
+        string before = 6;
+        repeated Commits commits = 7;
+    }
+
+    string id = 1;
+    string type = 2;
+    Actor actor = 3;
+    Repo repo = 4;
+    Payload payload = 5;
+    bool public = 6;
+    google.protobuf.Timestamp created_at = 7;
+}

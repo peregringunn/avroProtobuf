@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+message SomeMessage {
+
+    message Nested {
+        string title = 1;
+        uint32 year = 2;
+        repeated google.protobuf.Any cast = 3;
+        repeated google.protobuf.Any genres = 4;
+    }
+
+    repeated Nested items = 1;
+}

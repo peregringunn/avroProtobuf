@@ -1,0 +1,7 @@
+syntax = "proto3";
+package com.hitachivantara.proto;
+option java_package = "com.hitachivantara.proto";
+
+message IP {
+	string origin = 1;
+}	

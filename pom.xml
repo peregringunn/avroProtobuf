@@ -3,20 +3,79 @@
   <groupId>hitachivantara.com</groupId>
   <artifactId>avroProtobuf</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   
   <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	<maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
+	<protobuf.version>3.21.5</protobuf.version>
   </properties>
   
   <dependencies>
+	<dependency>
+  		<groupId>com.github.os72</groupId>
+  		<artifactId>protobuf-dynamic</artifactId>
+  		<version>1.0.1</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java-util -->
+	<dependency>
+	    <groupId>com.google.protobuf</groupId>
+	    <artifactId>protobuf-java-util</artifactId>
+	    <version>4.0.0-rc-2</version>
+	    <scope>runtime</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
+	<dependency>
+	    <groupId>org.scala-lang</groupId>
+	    <artifactId>scala-library</artifactId>
+	    <version>2.13.8</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-simple</artifactId>
+    	<version>1.7.31</version>
+	</dependency>
   	<dependency>
   		<groupId>org.apache.avro</groupId>
   		<artifactId>avro</artifactId>
   		<version>1.11.1</version>
 	</dependency>
+	<dependency>  
+	    <groupId>com.googlecode.json-simple</groupId>  
+	    <artifactId>json-simple</artifactId>  
+	    <version>1.1</version>  
+	</dependency>
+	<dependency>
+	    <groupId>com.google.protobuf</groupId>
+	    <artifactId>protobuf-java</artifactId>
+	    <version>${protobuf.version}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.opentelemetry.instrumentation/opentelemetry-instrumentation-api -->
+	<dependency>
+	    <groupId>io.opentelemetry.instrumentation</groupId>
+	    <artifactId>opentelemetry-instrumentation-api</artifactId>
+	    <version>1.15.0-alpha</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.opentelemetry/opentelemetry-api -->
+	<dependency>
+	    <groupId>io.opentelemetry</groupId>
+	    <artifactId>opentelemetry-api</artifactId>
+	    <version>1.15.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.javalin/javalin -->
+	<dependency>
+	    <groupId>io.javalin</groupId>
+	    <artifactId>javalin</artifactId>
+	    <version>4.6.4</version>
+	</dependency>
+	<dependency>
+	    <groupId>io.opentelemetry.instrumentation</groupId>
+	    <artifactId>opentelemetry-instrumentation-annotations</artifactId>
+	    <version>1.17.0-alpha</version>
+	</dependency>
   </dependencies>
-  
+
   <build>
   	<plugins>
 		<plugin>
@@ -30,7 +89,7 @@
 		        <goal>schema</goal>
 		      </goals>
 		      <configuration>
-		        <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		        <sourceDirectory>${project.basedir}/src/main/avro</sourceDirectory>
 		        <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
 		      </configuration>
 		    </execution>
@@ -39,12 +98,34 @@
 		<plugin>
 		  <groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-compiler-plugin</artifactId>
-		  <configuration>
-		    <source>1.8</source>
-		    <target>1.8</target>
+		  <version>3.8.1</version>
+		  <configuration>			
+		    <release>8</release>
 		  </configuration>
 		</plugin>
+		<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.0.0</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                    <configuration>
+                        <transformers>
+                            <transformer
+                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <manifestEntries>
+                                    <Main-Class>com.hitachivantara.avroProtobuf.MainDriver</Main-Class>
+                                </manifestEntries>
+                            </transformer>
+                        </transformers>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
   	</plugins>
   </build>
-  
 </project>

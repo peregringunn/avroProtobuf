@@ -1,0 +1,20 @@
+{"namespace": "com.hitachivantara.avro",
+ "type": "record",
+ "name": "Movies",
+ "fields": [
+     {"name": "title", 
+     "type": "string"},
+     
+     {"name": "year", 
+     "type": "long"},
+     
+     {"name": "cast", 
+     "type": {
+     	"type": "array", "items": "string"},
+     	"default": []},
+     
+    {"name": "genres", 
+     "type": {
+     	"type": "array", "items": "string"},
+     	"default": []}
+]}
