@@ -13,6 +13,18 @@
   </properties>
   
   <dependencies>
+<!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus -->
+	<dependency>
+	    <groupId>io.micrometer</groupId>
+	    <artifactId>micrometer-registry-prometheus</artifactId>
+	    <version>1.9.4</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-core -->
+	<dependency>
+	    <groupId>io.micrometer</groupId>
+	    <artifactId>micrometer-core</artifactId>
+	    <version>1.9.4</version>
+	</dependency>
 	<dependency>
   		<groupId>com.github.os72</groupId>
   		<artifactId>protobuf-dynamic</artifactId>
@@ -118,7 +130,7 @@
                             <transformer
                                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                 <manifestEntries>
-                                    <Main-Class>com.hitachivantara.avroProtobuf.MainDriver</Main-Class>
+                                    <Main-Class>com.hitachivantara.avroProtobufMain.MainDriver</Main-Class>
                                 </manifestEntries>
                             </transformer>
                         </transformers>

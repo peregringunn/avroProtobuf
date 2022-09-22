@@ -1,12 +1,14 @@
 syntax = "proto3";
+package com.hitachivantara.proto;
+option java_package = "com.hitachivantara.proto";
 
 import "google/protobuf/any.proto";
 
-message SomeMessage {
+message MovieMessage {
 
     message Nested {
         string title = 1;
-        uint32 year = 2;
+        uint64 year = 2;
         repeated google.protobuf.Any cast = 3;
         repeated google.protobuf.Any genres = 4;
     }

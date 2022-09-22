@@ -14,10 +14,10 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class personRecord extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -8083594422741956117L;
+  private static final long serialVersionUID = 8699089091213491262L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"personRecord\",\"namespace\":\"com.hitachivantara.avro\",\"fields\":[{\"name\":\"bioguideid\",\"type\":\"string\"},{\"name\":\"birthday\",\"type\":\"string\"},{\"name\":\"cspanid\",\"type\":\"long\"},{\"name\":\"firstname\",\"type\":\"string\"},{\"name\":\"gender\",\"type\":\"string\"},{\"name\":\"gender_label\",\"type\":\"string\"},{\"name\":\"lastname\",\"type\":\"string\"},{\"name\":\"link\",\"type\":\"string\"},{\"name\":\"middlename\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"namemod\",\"type\":\"string\"},{\"name\":\"nickname\",\"type\":\"string\"},{\"name\":\"osid\",\"type\":\"long\"},{\"name\":\"psvid\",\"type\":\"long\"},{\"name\":\"sortname\",\"type\":\"string\"},{\"name\":\"twiterid\",\"type\":\"string\"},{\"name\":\"youtubeid\",\"type\":\"string\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"personRecord\",\"namespace\":\"com.hitachivantara.avro\",\"fields\":[{\"name\":\"bioguideid\",\"type\":\"string\"},{\"name\":\"birthday\",\"type\":\"string\"},{\"name\":\"cspanid\",\"type\":\"string\"},{\"name\":\"firstname\",\"type\":\"string\"},{\"name\":\"gender\",\"type\":\"string\"},{\"name\":\"gender_label\",\"type\":\"string\"},{\"name\":\"lastname\",\"type\":\"string\"},{\"name\":\"link\",\"type\":\"string\"},{\"name\":\"middlename\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"namemod\",\"type\":\"string\"},{\"name\":\"nickname\",\"type\":\"string\"},{\"name\":\"osid\",\"type\":\"string\"},{\"name\":\"pvsid\",\"type\":\"string\"},{\"name\":\"sortname\",\"type\":\"string\"},{\"name\":\"twiterid\",\"type\":\"string\"},{\"name\":\"youtubeid\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -75,7 +75,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
 
   private java.lang.CharSequence bioguideid;
   private java.lang.CharSequence birthday;
-  private long cspanid;
+  private java.lang.CharSequence cspanid;
   private java.lang.CharSequence firstname;
   private java.lang.CharSequence gender;
   private java.lang.CharSequence gender_label;
@@ -85,8 +85,8 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
   private java.lang.CharSequence name;
   private java.lang.CharSequence namemod;
   private java.lang.CharSequence nickname;
-  private long osid;
-  private long psvid;
+  private java.lang.CharSequence osid;
+  private java.lang.CharSequence pvsid;
   private java.lang.CharSequence sortname;
   private java.lang.CharSequence twiterid;
   private java.lang.CharSequence youtubeid;
@@ -113,12 +113,12 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
    * @param namemod The new value for namemod
    * @param nickname The new value for nickname
    * @param osid The new value for osid
-   * @param psvid The new value for psvid
+   * @param pvsid The new value for pvsid
    * @param sortname The new value for sortname
    * @param twiterid The new value for twiterid
    * @param youtubeid The new value for youtubeid
    */
-  public personRecord(java.lang.CharSequence bioguideid, java.lang.CharSequence birthday, java.lang.Long cspanid, java.lang.CharSequence firstname, java.lang.CharSequence gender, java.lang.CharSequence gender_label, java.lang.CharSequence lastname, java.lang.CharSequence link, java.lang.CharSequence middlename, java.lang.CharSequence name, java.lang.CharSequence namemod, java.lang.CharSequence nickname, java.lang.Long osid, java.lang.Long psvid, java.lang.CharSequence sortname, java.lang.CharSequence twiterid, java.lang.CharSequence youtubeid) {
+  public personRecord(java.lang.CharSequence bioguideid, java.lang.CharSequence birthday, java.lang.CharSequence cspanid, java.lang.CharSequence firstname, java.lang.CharSequence gender, java.lang.CharSequence gender_label, java.lang.CharSequence lastname, java.lang.CharSequence link, java.lang.CharSequence middlename, java.lang.CharSequence name, java.lang.CharSequence namemod, java.lang.CharSequence nickname, java.lang.CharSequence osid, java.lang.CharSequence pvsid, java.lang.CharSequence sortname, java.lang.CharSequence twiterid, java.lang.CharSequence youtubeid) {
     this.bioguideid = bioguideid;
     this.birthday = birthday;
     this.cspanid = cspanid;
@@ -132,7 +132,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
     this.namemod = namemod;
     this.nickname = nickname;
     this.osid = osid;
-    this.psvid = psvid;
+    this.pvsid = pvsid;
     this.sortname = sortname;
     this.twiterid = twiterid;
     this.youtubeid = youtubeid;
@@ -161,7 +161,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
     case 10: return namemod;
     case 11: return nickname;
     case 12: return osid;
-    case 13: return psvid;
+    case 13: return pvsid;
     case 14: return sortname;
     case 15: return twiterid;
     case 16: return youtubeid;
@@ -176,7 +176,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
     switch (field$) {
     case 0: bioguideid = (java.lang.CharSequence)value$; break;
     case 1: birthday = (java.lang.CharSequence)value$; break;
-    case 2: cspanid = (java.lang.Long)value$; break;
+    case 2: cspanid = (java.lang.CharSequence)value$; break;
     case 3: firstname = (java.lang.CharSequence)value$; break;
     case 4: gender = (java.lang.CharSequence)value$; break;
     case 5: gender_label = (java.lang.CharSequence)value$; break;
@@ -186,8 +186,8 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
     case 9: name = (java.lang.CharSequence)value$; break;
     case 10: namemod = (java.lang.CharSequence)value$; break;
     case 11: nickname = (java.lang.CharSequence)value$; break;
-    case 12: osid = (java.lang.Long)value$; break;
-    case 13: psvid = (java.lang.Long)value$; break;
+    case 12: osid = (java.lang.CharSequence)value$; break;
+    case 13: pvsid = (java.lang.CharSequence)value$; break;
     case 14: sortname = (java.lang.CharSequence)value$; break;
     case 15: twiterid = (java.lang.CharSequence)value$; break;
     case 16: youtubeid = (java.lang.CharSequence)value$; break;
@@ -233,7 +233,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
    * Gets the value of the 'cspanid' field.
    * @return The value of the 'cspanid' field.
    */
-  public long getCspanid() {
+  public java.lang.CharSequence getCspanid() {
     return cspanid;
   }
 
@@ -242,7 +242,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
    * Sets the value of the 'cspanid' field.
    * @param value the value to set.
    */
-  public void setCspanid(long value) {
+  public void setCspanid(java.lang.CharSequence value) {
     this.cspanid = value;
   }
 
@@ -403,7 +403,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
    * Gets the value of the 'osid' field.
    * @return The value of the 'osid' field.
    */
-  public long getOsid() {
+  public java.lang.CharSequence getOsid() {
     return osid;
   }
 
@@ -412,25 +412,25 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
    * Sets the value of the 'osid' field.
    * @param value the value to set.
    */
-  public void setOsid(long value) {
+  public void setOsid(java.lang.CharSequence value) {
     this.osid = value;
   }
 
   /**
-   * Gets the value of the 'psvid' field.
-   * @return The value of the 'psvid' field.
+   * Gets the value of the 'pvsid' field.
+   * @return The value of the 'pvsid' field.
    */
-  public long getPsvid() {
-    return psvid;
+  public java.lang.CharSequence getPvsid() {
+    return pvsid;
   }
 
 
   /**
-   * Sets the value of the 'psvid' field.
+   * Sets the value of the 'pvsid' field.
    * @param value the value to set.
    */
-  public void setPsvid(long value) {
-    this.psvid = value;
+  public void setPvsid(java.lang.CharSequence value) {
+    this.pvsid = value;
   }
 
   /**
@@ -527,7 +527,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
 
     private java.lang.CharSequence bioguideid;
     private java.lang.CharSequence birthday;
-    private long cspanid;
+    private java.lang.CharSequence cspanid;
     private java.lang.CharSequence firstname;
     private java.lang.CharSequence gender;
     private java.lang.CharSequence gender_label;
@@ -537,8 +537,8 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
     private java.lang.CharSequence name;
     private java.lang.CharSequence namemod;
     private java.lang.CharSequence nickname;
-    private long osid;
-    private long psvid;
+    private java.lang.CharSequence osid;
+    private java.lang.CharSequence pvsid;
     private java.lang.CharSequence sortname;
     private java.lang.CharSequence twiterid;
     private java.lang.CharSequence youtubeid;
@@ -606,8 +606,8 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
         this.osid = data().deepCopy(fields()[12].schema(), other.osid);
         fieldSetFlags()[12] = other.fieldSetFlags()[12];
       }
-      if (isValidValue(fields()[13], other.psvid)) {
-        this.psvid = data().deepCopy(fields()[13].schema(), other.psvid);
+      if (isValidValue(fields()[13], other.pvsid)) {
+        this.pvsid = data().deepCopy(fields()[13].schema(), other.pvsid);
         fieldSetFlags()[13] = other.fieldSetFlags()[13];
       }
       if (isValidValue(fields()[14], other.sortname)) {
@@ -682,8 +682,8 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
         this.osid = data().deepCopy(fields()[12].schema(), other.osid);
         fieldSetFlags()[12] = true;
       }
-      if (isValidValue(fields()[13], other.psvid)) {
-        this.psvid = data().deepCopy(fields()[13].schema(), other.psvid);
+      if (isValidValue(fields()[13], other.pvsid)) {
+        this.pvsid = data().deepCopy(fields()[13].schema(), other.pvsid);
         fieldSetFlags()[13] = true;
       }
       if (isValidValue(fields()[14], other.sortname)) {
@@ -784,7 +784,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
       * Gets the value of the 'cspanid' field.
       * @return The value.
       */
-    public long getCspanid() {
+    public java.lang.CharSequence getCspanid() {
       return cspanid;
     }
 
@@ -794,7 +794,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'cspanid'.
       * @return This builder.
       */
-    public com.hitachivantara.avro.personRecord.Builder setCspanid(long value) {
+    public com.hitachivantara.avro.personRecord.Builder setCspanid(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.cspanid = value;
       fieldSetFlags()[2] = true;
@@ -815,6 +815,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
       * @return This builder.
       */
     public com.hitachivantara.avro.personRecord.Builder clearCspanid() {
+      cspanid = null;
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -1183,7 +1184,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
       * Gets the value of the 'osid' field.
       * @return The value.
       */
-    public long getOsid() {
+    public java.lang.CharSequence getOsid() {
       return osid;
     }
 
@@ -1193,7 +1194,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'osid'.
       * @return This builder.
       */
-    public com.hitachivantara.avro.personRecord.Builder setOsid(long value) {
+    public com.hitachivantara.avro.personRecord.Builder setOsid(java.lang.CharSequence value) {
       validate(fields()[12], value);
       this.osid = value;
       fieldSetFlags()[12] = true;
@@ -1214,45 +1215,47 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
       * @return This builder.
       */
     public com.hitachivantara.avro.personRecord.Builder clearOsid() {
+      osid = null;
       fieldSetFlags()[12] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'psvid' field.
+      * Gets the value of the 'pvsid' field.
       * @return The value.
       */
-    public long getPsvid() {
-      return psvid;
+    public java.lang.CharSequence getPvsid() {
+      return pvsid;
     }
 
 
     /**
-      * Sets the value of the 'psvid' field.
-      * @param value The value of 'psvid'.
+      * Sets the value of the 'pvsid' field.
+      * @param value The value of 'pvsid'.
       * @return This builder.
       */
-    public com.hitachivantara.avro.personRecord.Builder setPsvid(long value) {
+    public com.hitachivantara.avro.personRecord.Builder setPvsid(java.lang.CharSequence value) {
       validate(fields()[13], value);
-      this.psvid = value;
+      this.pvsid = value;
       fieldSetFlags()[13] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'psvid' field has been set.
-      * @return True if the 'psvid' field has been set, false otherwise.
+      * Checks whether the 'pvsid' field has been set.
+      * @return True if the 'pvsid' field has been set, false otherwise.
       */
-    public boolean hasPsvid() {
+    public boolean hasPvsid() {
       return fieldSetFlags()[13];
     }
 
 
     /**
-      * Clears the value of the 'psvid' field.
+      * Clears the value of the 'pvsid' field.
       * @return This builder.
       */
-    public com.hitachivantara.avro.personRecord.Builder clearPsvid() {
+    public com.hitachivantara.avro.personRecord.Builder clearPvsid() {
+      pvsid = null;
       fieldSetFlags()[13] = false;
       return this;
     }
@@ -1384,7 +1387,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
         personRecord record = new personRecord();
         record.bioguideid = fieldSetFlags()[0] ? this.bioguideid : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.birthday = fieldSetFlags()[1] ? this.birthday : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.cspanid = fieldSetFlags()[2] ? this.cspanid : (java.lang.Long) defaultValue(fields()[2]);
+        record.cspanid = fieldSetFlags()[2] ? this.cspanid : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.firstname = fieldSetFlags()[3] ? this.firstname : (java.lang.CharSequence) defaultValue(fields()[3]);
         record.gender = fieldSetFlags()[4] ? this.gender : (java.lang.CharSequence) defaultValue(fields()[4]);
         record.gender_label = fieldSetFlags()[5] ? this.gender_label : (java.lang.CharSequence) defaultValue(fields()[5]);
@@ -1394,8 +1397,8 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
         record.name = fieldSetFlags()[9] ? this.name : (java.lang.CharSequence) defaultValue(fields()[9]);
         record.namemod = fieldSetFlags()[10] ? this.namemod : (java.lang.CharSequence) defaultValue(fields()[10]);
         record.nickname = fieldSetFlags()[11] ? this.nickname : (java.lang.CharSequence) defaultValue(fields()[11]);
-        record.osid = fieldSetFlags()[12] ? this.osid : (java.lang.Long) defaultValue(fields()[12]);
-        record.psvid = fieldSetFlags()[13] ? this.psvid : (java.lang.Long) defaultValue(fields()[13]);
+        record.osid = fieldSetFlags()[12] ? this.osid : (java.lang.CharSequence) defaultValue(fields()[12]);
+        record.pvsid = fieldSetFlags()[13] ? this.pvsid : (java.lang.CharSequence) defaultValue(fields()[13]);
         record.sortname = fieldSetFlags()[14] ? this.sortname : (java.lang.CharSequence) defaultValue(fields()[14]);
         record.twiterid = fieldSetFlags()[15] ? this.twiterid : (java.lang.CharSequence) defaultValue(fields()[15]);
         record.youtubeid = fieldSetFlags()[16] ? this.youtubeid : (java.lang.CharSequence) defaultValue(fields()[16]);
@@ -1435,7 +1438,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
 
     out.writeString(this.birthday);
 
-    out.writeLong(this.cspanid);
+    out.writeString(this.cspanid);
 
     out.writeString(this.firstname);
 
@@ -1455,9 +1458,9 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
 
     out.writeString(this.nickname);
 
-    out.writeLong(this.osid);
+    out.writeString(this.osid);
 
-    out.writeLong(this.psvid);
+    out.writeString(this.pvsid);
 
     out.writeString(this.sortname);
 
@@ -1476,7 +1479,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
 
       this.birthday = in.readString(this.birthday instanceof Utf8 ? (Utf8)this.birthday : null);
 
-      this.cspanid = in.readLong();
+      this.cspanid = in.readString(this.cspanid instanceof Utf8 ? (Utf8)this.cspanid : null);
 
       this.firstname = in.readString(this.firstname instanceof Utf8 ? (Utf8)this.firstname : null);
 
@@ -1496,9 +1499,9 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
 
       this.nickname = in.readString(this.nickname instanceof Utf8 ? (Utf8)this.nickname : null);
 
-      this.osid = in.readLong();
+      this.osid = in.readString(this.osid instanceof Utf8 ? (Utf8)this.osid : null);
 
-      this.psvid = in.readLong();
+      this.pvsid = in.readString(this.pvsid instanceof Utf8 ? (Utf8)this.pvsid : null);
 
       this.sortname = in.readString(this.sortname instanceof Utf8 ? (Utf8)this.sortname : null);
 
@@ -1518,7 +1521,7 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
           break;
 
         case 2:
-          this.cspanid = in.readLong();
+          this.cspanid = in.readString(this.cspanid instanceof Utf8 ? (Utf8)this.cspanid : null);
           break;
 
         case 3:
@@ -1558,11 +1561,11 @@ public class personRecord extends org.apache.avro.specific.SpecificRecordBase im
           break;
 
         case 12:
-          this.osid = in.readLong();
+          this.osid = in.readString(this.osid instanceof Utf8 ? (Utf8)this.osid : null);
           break;
 
         case 13:
-          this.psvid = in.readLong();
+          this.pvsid = in.readString(this.pvsid instanceof Utf8 ? (Utf8)this.pvsid : null);
           break;
 
         case 14:

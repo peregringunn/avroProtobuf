@@ -1,4 +1,0 @@
-Objavro.schema¾
-{"type":"record","name":"generic","namespace":"com.hitachivantara.avro","fields":[{"name":"state_name","type":"string"},{"name":"state_id","type":"string"}]}>Andaman and Nicobar Island (UT)ANAndhra PradeshAP"Arunachal PradeshAR
-AssamAS
-BiharBRChandigarh (UT)CHChhattisgarhCG6Dadra and Nagar Haveli (UT)DN$Daman and Diu (UT)DDDelhi (NCT)DLGoaGAGujaratGJHaryanaHR Himachal PradeshHP,Jammu and Kashmir (UT)JKJharkhandJHKarnatakaKAKeralaKLLadakh(UT)LK Lakshadweep (UT)LDMadhya PradeshMPMaharashtraMHManipurMNMeghalayaMLMizoramMZNagalandNLOdishaORPuducherry (UT)PYPunjabPBRajasthanRJSikkimSKTamil NaduTNTelanganaTGTripuraTRUttarakhandUKUttar PradeshUPWest BengalWB

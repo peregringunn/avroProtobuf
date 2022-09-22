@@ -43,7 +43,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>com.hitachivantara.avroProtobuf.MainDriver</Main-Class>
+                    <Main-Class>com.hitachivantara.avroProtobufMain.MainDriver</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>

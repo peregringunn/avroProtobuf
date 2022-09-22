@@ -14,10 +14,10 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class representatives extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6462838949239691330L;
+  private static final long serialVersionUID = 5901424743003790826L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"representatives\",\"namespace\":\"com.hitachivantara.avro\",\"fields\":[{\"name\":\"meta\",\"type\":{\"type\":\"record\",\"name\":\"metaRecord\",\"fields\":[{\"name\":\"limit\",\"type\":\"long\"},{\"name\":\"offset\",\"type\":\"long\"},{\"name\":\"total_count\",\"type\":\"long\"}]}},{\"name\":\"objects\",\"type\":{\"type\":\"record\",\"name\":\"ObjectsRecord\",\"fields\":[{\"name\":\"caucus\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"congress_numbers\",\"type\":{\"type\":\"array\",\"items\":\"long\"},\"default\":[]},{\"name\":\"current\",\"type\":\"boolean\"},{\"name\":\"description\",\"type\":\"string\"},{\"name\":\"district\",\"type\":\"long\"},{\"name\":\"enddate\",\"type\":\"string\"},{\"name\":\"extra\",\"type\":{\"type\":\"record\",\"name\":\"extraRecord\",\"fields\":[{\"name\":\"address\",\"type\":\"string\"},{\"name\":\"office\",\"type\":\"string\"},{\"name\":\"rss_url\",\"type\":\"string\"}]}},{\"name\":\"leadership_title\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"party\",\"type\":\"string\"},{\"name\":\"person\",\"type\":{\"type\":\"record\",\"name\":\"personRecord\",\"fields\":[{\"name\":\"bioguideid\",\"type\":\"string\"},{\"name\":\"birthday\",\"type\":\"string\"},{\"name\":\"cspanid\",\"type\":\"long\"},{\"name\":\"firstname\",\"type\":\"string\"},{\"name\":\"gender\",\"type\":\"string\"},{\"name\":\"gender_label\",\"type\":\"string\"},{\"name\":\"lastname\",\"type\":\"string\"},{\"name\":\"link\",\"type\":\"string\"},{\"name\":\"middlename\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"namemod\",\"type\":\"string\"},{\"name\":\"nickname\",\"type\":\"string\"},{\"name\":\"osid\",\"type\":\"long\"},{\"name\":\"psvid\",\"type\":\"long\"},{\"name\":\"sortname\",\"type\":\"string\"},{\"name\":\"twiterid\",\"type\":\"string\"},{\"name\":\"youtubeid\",\"type\":\"string\"}]}},{\"name\":\"phone\",\"type\":\"string\"},{\"name\":\"role_type\",\"type\":\"string\"},{\"name\":\"role_type_label\",\"type\":\"string\"},{\"name\":\"startdate\",\"type\":\"string\"},{\"name\":\"state\",\"type\":\"string\"},{\"name\":\"title\",\"type\":\"string\"},{\"name\":\"title_long\",\"type\":\"string\"},{\"name\":\"website\",\"type\":\"string\"}]}}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"representatives\",\"namespace\":\"com.hitachivantara.avro\",\"fields\":[{\"name\":\"meta\",\"type\":{\"type\":\"record\",\"name\":\"metaRecord\",\"fields\":[{\"name\":\"limit\",\"type\":\"long\"},{\"name\":\"offset\",\"type\":\"long\"},{\"name\":\"total_count\",\"type\":\"long\"}]}},{\"name\":\"objects\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"ObjectsRecord\",\"fields\":[{\"name\":\"caucus\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"congress_numbers\",\"type\":{\"type\":\"array\",\"items\":\"long\"},\"default\":[]},{\"name\":\"current\",\"type\":\"boolean\"},{\"name\":\"description\",\"type\":\"string\"},{\"name\":\"district\",\"type\":\"long\"},{\"name\":\"enddate\",\"type\":\"string\"},{\"name\":\"extra\",\"type\":{\"type\":\"record\",\"name\":\"extraRecord\",\"fields\":[{\"name\":\"address\",\"type\":\"string\"},{\"name\":\"office\",\"type\":\"string\"},{\"name\":\"rss_url\",\"type\":\"string\"}]}},{\"name\":\"leadership_title\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"party\",\"type\":\"string\"},{\"name\":\"person\",\"type\":{\"type\":\"record\",\"name\":\"personRecord\",\"fields\":[{\"name\":\"bioguideid\",\"type\":\"string\"},{\"name\":\"birthday\",\"type\":\"string\"},{\"name\":\"cspanid\",\"type\":\"string\"},{\"name\":\"firstname\",\"type\":\"string\"},{\"name\":\"gender\",\"type\":\"string\"},{\"name\":\"gender_label\",\"type\":\"string\"},{\"name\":\"lastname\",\"type\":\"string\"},{\"name\":\"link\",\"type\":\"string\"},{\"name\":\"middlename\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"namemod\",\"type\":\"string\"},{\"name\":\"nickname\",\"type\":\"string\"},{\"name\":\"osid\",\"type\":\"string\"},{\"name\":\"pvsid\",\"type\":\"string\"},{\"name\":\"sortname\",\"type\":\"string\"},{\"name\":\"twiterid\",\"type\":\"string\"},{\"name\":\"youtubeid\",\"type\":\"string\"}]}},{\"name\":\"phone\",\"type\":\"string\"},{\"name\":\"role_type\",\"type\":\"string\"},{\"name\":\"role_type_label\",\"type\":\"string\"},{\"name\":\"startdate\",\"type\":\"string\"},{\"name\":\"state\",\"type\":\"string\"},{\"name\":\"title\",\"type\":\"string\"},{\"name\":\"title_long\",\"type\":\"string\"},{\"name\":\"website\",\"type\":\"string\"}]},\"default\":[]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -74,7 +74,7 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
   }
 
   private com.hitachivantara.avro.metaRecord meta;
-  private com.hitachivantara.avro.ObjectsRecord objects;
+  private java.util.List<com.hitachivantara.avro.ObjectsRecord> objects;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -88,7 +88,7 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
    * @param meta The new value for meta
    * @param objects The new value for objects
    */
-  public representatives(com.hitachivantara.avro.metaRecord meta, com.hitachivantara.avro.ObjectsRecord objects) {
+  public representatives(com.hitachivantara.avro.metaRecord meta, java.util.List<com.hitachivantara.avro.ObjectsRecord> objects) {
     this.meta = meta;
     this.objects = objects;
   }
@@ -115,7 +115,7 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: meta = (com.hitachivantara.avro.metaRecord)value$; break;
-    case 1: objects = (com.hitachivantara.avro.ObjectsRecord)value$; break;
+    case 1: objects = (java.util.List<com.hitachivantara.avro.ObjectsRecord>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -141,7 +141,7 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
    * Gets the value of the 'objects' field.
    * @return The value of the 'objects' field.
    */
-  public com.hitachivantara.avro.ObjectsRecord getObjects() {
+  public java.util.List<com.hitachivantara.avro.ObjectsRecord> getObjects() {
     return objects;
   }
 
@@ -150,7 +150,7 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
    * Sets the value of the 'objects' field.
    * @param value the value to set.
    */
-  public void setObjects(com.hitachivantara.avro.ObjectsRecord value) {
+  public void setObjects(java.util.List<com.hitachivantara.avro.ObjectsRecord> value) {
     this.objects = value;
   }
 
@@ -197,8 +197,7 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
 
     private com.hitachivantara.avro.metaRecord meta;
     private com.hitachivantara.avro.metaRecord.Builder metaBuilder;
-    private com.hitachivantara.avro.ObjectsRecord objects;
-    private com.hitachivantara.avro.ObjectsRecord.Builder objectsBuilder;
+    private java.util.List<com.hitachivantara.avro.ObjectsRecord> objects;
 
     /** Creates a new Builder */
     private Builder() {
@@ -222,9 +221,6 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
         this.objects = data().deepCopy(fields()[1].schema(), other.objects);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (other.hasObjectsBuilder()) {
-        this.objectsBuilder = com.hitachivantara.avro.ObjectsRecord.newBuilder(other.getObjectsBuilder());
-      }
     }
 
     /**
@@ -242,7 +238,6 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
         this.objects = data().deepCopy(fields()[1].schema(), other.objects);
         fieldSetFlags()[1] = true;
       }
-      this.objectsBuilder = null;
     }
 
     /**
@@ -325,7 +320,7 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
       * Gets the value of the 'objects' field.
       * @return The value.
       */
-    public com.hitachivantara.avro.ObjectsRecord getObjects() {
+    public java.util.List<com.hitachivantara.avro.ObjectsRecord> getObjects() {
       return objects;
     }
 
@@ -335,9 +330,8 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
       * @param value The value of 'objects'.
       * @return This builder.
       */
-    public com.hitachivantara.avro.representatives.Builder setObjects(com.hitachivantara.avro.ObjectsRecord value) {
+    public com.hitachivantara.avro.representatives.Builder setObjects(java.util.List<com.hitachivantara.avro.ObjectsRecord> value) {
       validate(fields()[1], value);
-      this.objectsBuilder = null;
       this.objects = value;
       fieldSetFlags()[1] = true;
       return this;
@@ -351,40 +345,6 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
       return fieldSetFlags()[1];
     }
 
-    /**
-     * Gets the Builder instance for the 'objects' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public com.hitachivantara.avro.ObjectsRecord.Builder getObjectsBuilder() {
-      if (objectsBuilder == null) {
-        if (hasObjects()) {
-          setObjectsBuilder(com.hitachivantara.avro.ObjectsRecord.newBuilder(objects));
-        } else {
-          setObjectsBuilder(com.hitachivantara.avro.ObjectsRecord.newBuilder());
-        }
-      }
-      return objectsBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'objects' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-
-    public com.hitachivantara.avro.representatives.Builder setObjectsBuilder(com.hitachivantara.avro.ObjectsRecord.Builder value) {
-      clearObjects();
-      objectsBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'objects' field has an active Builder instance
-     * @return True if the 'objects' field has an active Builder instance
-     */
-    public boolean hasObjectsBuilder() {
-      return objectsBuilder != null;
-    }
 
     /**
       * Clears the value of the 'objects' field.
@@ -392,7 +352,6 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
       */
     public com.hitachivantara.avro.representatives.Builder clearObjects() {
       objects = null;
-      objectsBuilder = null;
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -412,16 +371,7 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
         } else {
           record.meta = fieldSetFlags()[0] ? this.meta : (com.hitachivantara.avro.metaRecord) defaultValue(fields()[0]);
         }
-        if (objectsBuilder != null) {
-          try {
-            record.objects = this.objectsBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("objects"));
-            throw e;
-          }
-        } else {
-          record.objects = fieldSetFlags()[1] ? this.objects : (com.hitachivantara.avro.ObjectsRecord) defaultValue(fields()[1]);
-        }
+        record.objects = fieldSetFlags()[1] ? this.objects : (java.util.List<com.hitachivantara.avro.ObjectsRecord>) defaultValue(fields()[1]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -456,7 +406,18 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
   {
     this.meta.customEncode(out);
 
-    this.objects.customEncode(out);
+    long size0 = this.objects.size();
+    out.writeArrayStart();
+    out.setItemCount(size0);
+    long actualSize0 = 0;
+    for (com.hitachivantara.avro.ObjectsRecord e0: this.objects) {
+      actualSize0++;
+      out.startItem();
+      e0.customEncode(out);
+    }
+    out.writeArrayEnd();
+    if (actualSize0 != size0)
+      throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
 
   }
 
@@ -470,10 +431,23 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
       }
       this.meta.customDecode(in);
 
-      if (this.objects == null) {
-        this.objects = new com.hitachivantara.avro.ObjectsRecord();
+      long size0 = in.readArrayStart();
+      java.util.List<com.hitachivantara.avro.ObjectsRecord> a0 = this.objects;
+      if (a0 == null) {
+        a0 = new SpecificData.Array<com.hitachivantara.avro.ObjectsRecord>((int)size0, SCHEMA$.getField("objects").schema());
+        this.objects = a0;
+      } else a0.clear();
+      SpecificData.Array<com.hitachivantara.avro.ObjectsRecord> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.hitachivantara.avro.ObjectsRecord>)a0 : null);
+      for ( ; 0 < size0; size0 = in.arrayNext()) {
+        for ( ; size0 != 0; size0--) {
+          com.hitachivantara.avro.ObjectsRecord e0 = (ga0 != null ? ga0.peek() : null);
+          if (e0 == null) {
+            e0 = new com.hitachivantara.avro.ObjectsRecord();
+          }
+          e0.customDecode(in);
+          a0.add(e0);
+        }
       }
-      this.objects.customDecode(in);
 
     } else {
       for (int i = 0; i < 2; i++) {
@@ -486,10 +460,23 @@ public class representatives extends org.apache.avro.specific.SpecificRecordBase
           break;
 
         case 1:
-          if (this.objects == null) {
-            this.objects = new com.hitachivantara.avro.ObjectsRecord();
+          long size0 = in.readArrayStart();
+          java.util.List<com.hitachivantara.avro.ObjectsRecord> a0 = this.objects;
+          if (a0 == null) {
+            a0 = new SpecificData.Array<com.hitachivantara.avro.ObjectsRecord>((int)size0, SCHEMA$.getField("objects").schema());
+            this.objects = a0;
+          } else a0.clear();
+          SpecificData.Array<com.hitachivantara.avro.ObjectsRecord> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.hitachivantara.avro.ObjectsRecord>)a0 : null);
+          for ( ; 0 < size0; size0 = in.arrayNext()) {
+            for ( ; size0 != 0; size0--) {
+              com.hitachivantara.avro.ObjectsRecord e0 = (ga0 != null ? ga0.peek() : null);
+              if (e0 == null) {
+                e0 = new com.hitachivantara.avro.ObjectsRecord();
+              }
+              e0.customDecode(in);
+              a0.add(e0);
+            }
           }
-          this.objects.customDecode(in);
           break;
 
         default:

@@ -39,47 +39,7 @@
 				"type": "string"}
 			]},
 		"name": "payload",
-		"type":{
-			"type": "record",
-			"name": "payloadRecord",
-			"fields": [
-				{"name": "push_id",
-				"type": "long"},
-				{"name": "size",
-				"type": "long"},
-				{"name": "distinct_size",
-				"type": "long"},
-				{"name": "ref",
-				"type": "string"},
-				{"name": "head",
-				"type": "string"},
-				{"name": "before",
-				"type": "string"},
-				{"name": "commits",
-				"type": {
-					"type": "record",
-					"name": "commitsRecord",
-					"fields": [
-						{"name": "sha",
-						"type": "string"},
-						{"name": "author",
-						"type": {
-							"type": "record",
-							"name": "authorRecord",
-							"fields": [
-								{"name": "email",
-								"type": "string"},
-								{"name": "name",
-								"type": "string"}]}
-						}
-				]},
-					"name": "message",
-					"type": "string"},
-					{"name": "distinct",
-					"type": "boolean"},
-					{"name": "url",
-					"type": "string"}
-				]}},
+		"type": "string"},
 		{"name": "public",
 		"type": "boolean"},
 		{"name": "created_at",
