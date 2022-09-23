@@ -23,8 +23,8 @@
 				{"name": "url",
 				"type": "string"},
 				{"name": "avatar_url",
-				"type": "string"}]
-			}
+				"type": "string"}
+			]}
 		},
 		{"name": "repo",
 		"type": {
@@ -37,13 +37,13 @@
 				"type": "string"},
 				{"name": "url",
 				"type": "string"}
-			]},
-		"name": "payload",
+			]}
+		},
+		{"name": "payload",
 		"type": "string"},
 		{"name": "public",
 		"type": "boolean"},
 		{"name": "created_at",
 		"type": "string"}
-		]}
 	]
 }

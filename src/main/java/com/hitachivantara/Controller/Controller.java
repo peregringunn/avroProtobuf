@@ -10,12 +10,12 @@ import io.opentelemetry.instrumentation.annotations.WithSpan;
 public class Controller {
 
 	public static void start(Context context) {
-		airline();
+//		airline();
 		event();
-		ip();
-		ipLong();
-		movie();
-		reps();
+//		ip();
+//		ipLong();
+//		movie();
+//		reps();
 		context.status(200);
 	}
 	
@@ -50,8 +50,8 @@ public class Controller {
 	@WithSpan
 	private static void event() {
 		Avro.event();
-		Json.event();
-		Proto.event();		
+//		Json.event();
+//		Proto.event();		
 	}
 
 	@WithSpan

@@ -9,8 +9,9 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import com.google.protobuf.Timestamp;
-import com.hitachivantara.models.avro.Event;
-import com.hitachivantara.models.avro.actorRecord;
+import com.hitachivantara.avro.Event;
+import com.hitachivantara.avro.repoRecord;
+import com.hitachivantara.avro.actorRecord;
 import com.hitachivantara.models.proto.EventMessage.eventMessages;
 import com.hitachivantara.models.proto.EventMessage.eventMessages.Actor;
 import com.hitachivantara.models.proto.EventMessage.eventMessages.Repo;
@@ -86,7 +87,25 @@ public class EventConverter {
 		event.setPayload(obj.get("payload").toString());
 		event.setPublic$((boolean) obj.get("public"));
 		event.setType((String) obj.get("type"));
+		event.setRepo(createAvroRepo(obj));
 		return event;
+	}
+
+	private static repoRecord createAvroRepo(JSONObject obj) {
+		JSONParser parser = new JSONParser();
+		JSONObject repoObj;
+		try {
+			repoObj = (JSONObject) parser.parse(obj.get("repo").toString());
+			repoRecord repo = new repoRecord();
+			repo.setId((long) repoObj.get("id"));
+			repo.setName(repoObj.get("name").toString());
+			repo.setUrl(repoObj.get("url").toString());
+			return repo;
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
 	}
 
 	private static actorRecord createAvroActor(JSONObject obj) {

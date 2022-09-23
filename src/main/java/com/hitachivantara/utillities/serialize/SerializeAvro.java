@@ -13,7 +13,7 @@ import com.hitachivantara.models.avro.representatives;
 import io.opentelemetry.instrumentation.annotations.WithSpan;
 
 import com.hitachivantara.models.avro.Airlines;
-import com.hitachivantara.models.avro.Event;
+import com.hitachivantara.avro.Event;
 import com.hitachivantara.models.avro.IP;
 import com.hitachivantara.models.avro.Movies;
 
@@ -33,7 +33,7 @@ public class SerializeAvro {
 		}
 	}
 	@WithSpan
-	public static void serializeEvent(List<Event> list, String filename) {
+	public static void serializeEvent(List<com.hitachivantara.avro.Event> list, String filename) {
 		DatumWriter<Event> datumWriter = new SpecificDatumWriter<>();
 		DataFileWriter<Event> dataFileWriter = new DataFileWriter<>(datumWriter);
 		try {

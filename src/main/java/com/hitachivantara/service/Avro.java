@@ -32,7 +32,7 @@ public class Avro {
 	
 	@WithSpan
 	public static void event () {
-		List<Event> list = EventConverter.jsonToAvro(JSONFileReadWrite.JSONReader("json/events.json"));
+		List<com.hitachivantara.avro.Event> list = EventConverter.jsonToAvro(JSONFileReadWrite.JSONReader("json/events.json"));
 		Monitoring.avroSerializeEventsTimer.record(() -> {
 			SerializeAvro.serializeEvent(list, "avro/events.avro");
 		});

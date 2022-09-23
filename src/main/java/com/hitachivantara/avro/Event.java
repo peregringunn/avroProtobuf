@@ -14,10 +14,10 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Event extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8420668847995002L;
+  private static final long serialVersionUID = -273514878682620163L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Event\",\"namespace\":\"com.hitachivantara.avro\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"actor\",\"type\":{\"type\":\"record\",\"name\":\"actorRecord\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"login\",\"type\":\"string\"},{\"name\":\"display_login\",\"type\":\"string\"},{\"name\":\"gravatar_id\",\"type\":\"string\"},{\"name\":\"url\",\"type\":\"string\"},{\"name\":\"avatar_url\",\"type\":\"string\"}]}},{\"name\":\"payload\",\"type\":\"string\"},{\"name\":\"public\",\"type\":\"boolean\"},{\"name\":\"created_at\",\"type\":\"string\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Event\",\"namespace\":\"com.hitachivantara.avro\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"actor\",\"type\":{\"type\":\"record\",\"name\":\"actorRecord\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"login\",\"type\":\"string\"},{\"name\":\"display_login\",\"type\":\"string\"},{\"name\":\"gravatar_id\",\"type\":\"string\"},{\"name\":\"url\",\"type\":\"string\"},{\"name\":\"avatar_url\",\"type\":\"string\"}]}},{\"name\":\"repo\",\"type\":{\"type\":\"record\",\"name\":\"repoRecord\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"url\",\"type\":\"string\"}]}},{\"name\":\"payload\",\"type\":\"string\"},{\"name\":\"public\",\"type\":\"boolean\"},{\"name\":\"created_at\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -76,6 +76,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
   private long id;
   private java.lang.CharSequence type;
   private com.hitachivantara.avro.actorRecord actor;
+  private com.hitachivantara.avro.repoRecord repo;
   private java.lang.CharSequence payload;
   private boolean public$;
   private java.lang.CharSequence created_at;
@@ -92,14 +93,16 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
    * @param id The new value for id
    * @param type The new value for type
    * @param actor The new value for actor
+   * @param repo The new value for repo
    * @param payload The new value for payload
    * @param public$ The new value for public
    * @param created_at The new value for created_at
    */
-  public Event(java.lang.Long id, java.lang.CharSequence type, com.hitachivantara.avro.actorRecord actor, java.lang.CharSequence payload, java.lang.Boolean public$, java.lang.CharSequence created_at) {
+  public Event(java.lang.Long id, java.lang.CharSequence type, com.hitachivantara.avro.actorRecord actor, com.hitachivantara.avro.repoRecord repo, java.lang.CharSequence payload, java.lang.Boolean public$, java.lang.CharSequence created_at) {
     this.id = id;
     this.type = type;
     this.actor = actor;
+    this.repo = repo;
     this.payload = payload;
     this.public$ = public$;
     this.created_at = created_at;
@@ -118,9 +121,10 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     case 0: return id;
     case 1: return type;
     case 2: return actor;
-    case 3: return payload;
-    case 4: return public$;
-    case 5: return created_at;
+    case 3: return repo;
+    case 4: return payload;
+    case 5: return public$;
+    case 6: return created_at;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -133,9 +137,10 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     case 0: id = (java.lang.Long)value$; break;
     case 1: type = (java.lang.CharSequence)value$; break;
     case 2: actor = (com.hitachivantara.avro.actorRecord)value$; break;
-    case 3: payload = (java.lang.CharSequence)value$; break;
-    case 4: public$ = (java.lang.Boolean)value$; break;
-    case 5: created_at = (java.lang.CharSequence)value$; break;
+    case 3: repo = (com.hitachivantara.avro.repoRecord)value$; break;
+    case 4: payload = (java.lang.CharSequence)value$; break;
+    case 5: public$ = (java.lang.Boolean)value$; break;
+    case 6: created_at = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -189,6 +194,23 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
    */
   public void setActor(com.hitachivantara.avro.actorRecord value) {
     this.actor = value;
+  }
+
+  /**
+   * Gets the value of the 'repo' field.
+   * @return The value of the 'repo' field.
+   */
+  public com.hitachivantara.avro.repoRecord getRepo() {
+    return repo;
+  }
+
+
+  /**
+   * Sets the value of the 'repo' field.
+   * @param value the value to set.
+   */
+  public void setRepo(com.hitachivantara.avro.repoRecord value) {
+    this.repo = value;
   }
 
   /**
@@ -287,6 +309,8 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     private java.lang.CharSequence type;
     private com.hitachivantara.avro.actorRecord actor;
     private com.hitachivantara.avro.actorRecord.Builder actorBuilder;
+    private com.hitachivantara.avro.repoRecord repo;
+    private com.hitachivantara.avro.repoRecord.Builder repoBuilder;
     private java.lang.CharSequence payload;
     private boolean public$;
     private java.lang.CharSequence created_at;
@@ -317,17 +341,24 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       if (other.hasActorBuilder()) {
         this.actorBuilder = com.hitachivantara.avro.actorRecord.newBuilder(other.getActorBuilder());
       }
-      if (isValidValue(fields()[3], other.payload)) {
-        this.payload = data().deepCopy(fields()[3].schema(), other.payload);
+      if (isValidValue(fields()[3], other.repo)) {
+        this.repo = data().deepCopy(fields()[3].schema(), other.repo);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[4], other.public$)) {
-        this.public$ = data().deepCopy(fields()[4].schema(), other.public$);
+      if (other.hasRepoBuilder()) {
+        this.repoBuilder = com.hitachivantara.avro.repoRecord.newBuilder(other.getRepoBuilder());
+      }
+      if (isValidValue(fields()[4], other.payload)) {
+        this.payload = data().deepCopy(fields()[4].schema(), other.payload);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
-      if (isValidValue(fields()[5], other.created_at)) {
-        this.created_at = data().deepCopy(fields()[5].schema(), other.created_at);
+      if (isValidValue(fields()[5], other.public$)) {
+        this.public$ = data().deepCopy(fields()[5].schema(), other.public$);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      }
+      if (isValidValue(fields()[6], other.created_at)) {
+        this.created_at = data().deepCopy(fields()[6].schema(), other.created_at);
+        fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
     }
 
@@ -350,17 +381,22 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
         fieldSetFlags()[2] = true;
       }
       this.actorBuilder = null;
-      if (isValidValue(fields()[3], other.payload)) {
-        this.payload = data().deepCopy(fields()[3].schema(), other.payload);
+      if (isValidValue(fields()[3], other.repo)) {
+        this.repo = data().deepCopy(fields()[3].schema(), other.repo);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.public$)) {
-        this.public$ = data().deepCopy(fields()[4].schema(), other.public$);
+      this.repoBuilder = null;
+      if (isValidValue(fields()[4], other.payload)) {
+        this.payload = data().deepCopy(fields()[4].schema(), other.payload);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.created_at)) {
-        this.created_at = data().deepCopy(fields()[5].schema(), other.created_at);
+      if (isValidValue(fields()[5], other.public$)) {
+        this.public$ = data().deepCopy(fields()[5].schema(), other.public$);
         fieldSetFlags()[5] = true;
+      }
+      if (isValidValue(fields()[6], other.created_at)) {
+        this.created_at = data().deepCopy(fields()[6].schema(), other.created_at);
+        fieldSetFlags()[6] = true;
       }
     }
 
@@ -520,6 +556,82 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
 
     /**
+      * Gets the value of the 'repo' field.
+      * @return The value.
+      */
+    public com.hitachivantara.avro.repoRecord getRepo() {
+      return repo;
+    }
+
+
+    /**
+      * Sets the value of the 'repo' field.
+      * @param value The value of 'repo'.
+      * @return This builder.
+      */
+    public com.hitachivantara.avro.Event.Builder setRepo(com.hitachivantara.avro.repoRecord value) {
+      validate(fields()[3], value);
+      this.repoBuilder = null;
+      this.repo = value;
+      fieldSetFlags()[3] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'repo' field has been set.
+      * @return True if the 'repo' field has been set, false otherwise.
+      */
+    public boolean hasRepo() {
+      return fieldSetFlags()[3];
+    }
+
+    /**
+     * Gets the Builder instance for the 'repo' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public com.hitachivantara.avro.repoRecord.Builder getRepoBuilder() {
+      if (repoBuilder == null) {
+        if (hasRepo()) {
+          setRepoBuilder(com.hitachivantara.avro.repoRecord.newBuilder(repo));
+        } else {
+          setRepoBuilder(com.hitachivantara.avro.repoRecord.newBuilder());
+        }
+      }
+      return repoBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'repo' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public com.hitachivantara.avro.Event.Builder setRepoBuilder(com.hitachivantara.avro.repoRecord.Builder value) {
+      clearRepo();
+      repoBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'repo' field has an active Builder instance
+     * @return True if the 'repo' field has an active Builder instance
+     */
+    public boolean hasRepoBuilder() {
+      return repoBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'repo' field.
+      * @return This builder.
+      */
+    public com.hitachivantara.avro.Event.Builder clearRepo() {
+      repo = null;
+      repoBuilder = null;
+      fieldSetFlags()[3] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'payload' field.
       * @return The value.
       */
@@ -534,9 +646,9 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       * @return This builder.
       */
     public com.hitachivantara.avro.Event.Builder setPayload(java.lang.CharSequence value) {
-      validate(fields()[3], value);
+      validate(fields()[4], value);
       this.payload = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -545,7 +657,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       * @return True if the 'payload' field has been set, false otherwise.
       */
     public boolean hasPayload() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[4];
     }
 
 
@@ -555,7 +667,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       */
     public com.hitachivantara.avro.Event.Builder clearPayload() {
       payload = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -574,9 +686,9 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       * @return This builder.
       */
     public com.hitachivantara.avro.Event.Builder setPublic$(boolean value) {
-      validate(fields()[4], value);
+      validate(fields()[5], value);
       this.public$ = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -585,7 +697,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       * @return True if the 'public$' field has been set, false otherwise.
       */
     public boolean hasPublic$() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[5];
     }
 
 
@@ -594,7 +706,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       * @return This builder.
       */
     public com.hitachivantara.avro.Event.Builder clearPublic$() {
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -613,9 +725,9 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       * @return This builder.
       */
     public com.hitachivantara.avro.Event.Builder setCreatedAt(java.lang.CharSequence value) {
-      validate(fields()[5], value);
+      validate(fields()[6], value);
       this.created_at = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[6] = true;
       return this;
     }
 
@@ -624,7 +736,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       * @return True if the 'created_at' field has been set, false otherwise.
       */
     public boolean hasCreatedAt() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[6];
     }
 
 
@@ -634,7 +746,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       */
     public com.hitachivantara.avro.Event.Builder clearCreatedAt() {
       created_at = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[6] = false;
       return this;
     }
 
@@ -655,9 +767,19 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
         } else {
           record.actor = fieldSetFlags()[2] ? this.actor : (com.hitachivantara.avro.actorRecord) defaultValue(fields()[2]);
         }
-        record.payload = fieldSetFlags()[3] ? this.payload : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.public$ = fieldSetFlags()[4] ? this.public$ : (java.lang.Boolean) defaultValue(fields()[4]);
-        record.created_at = fieldSetFlags()[5] ? this.created_at : (java.lang.CharSequence) defaultValue(fields()[5]);
+        if (repoBuilder != null) {
+          try {
+            record.repo = this.repoBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("repo"));
+            throw e;
+          }
+        } else {
+          record.repo = fieldSetFlags()[3] ? this.repo : (com.hitachivantara.avro.repoRecord) defaultValue(fields()[3]);
+        }
+        record.payload = fieldSetFlags()[4] ? this.payload : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.public$ = fieldSetFlags()[5] ? this.public$ : (java.lang.Boolean) defaultValue(fields()[5]);
+        record.created_at = fieldSetFlags()[6] ? this.created_at : (java.lang.CharSequence) defaultValue(fields()[6]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -696,6 +818,8 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
 
     this.actor.customEncode(out);
 
+    this.repo.customEncode(out);
+
     out.writeString(this.payload);
 
     out.writeBoolean(this.public$);
@@ -718,6 +842,11 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       }
       this.actor.customDecode(in);
 
+      if (this.repo == null) {
+        this.repo = new com.hitachivantara.avro.repoRecord();
+      }
+      this.repo.customDecode(in);
+
       this.payload = in.readString(this.payload instanceof Utf8 ? (Utf8)this.payload : null);
 
       this.public$ = in.readBoolean();
@@ -725,7 +854,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
       this.created_at = in.readString(this.created_at instanceof Utf8 ? (Utf8)this.created_at : null);
 
     } else {
-      for (int i = 0; i < 6; i++) {
+      for (int i = 0; i < 7; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           this.id = in.readLong();
@@ -743,14 +872,21 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
           break;
 
         case 3:
-          this.payload = in.readString(this.payload instanceof Utf8 ? (Utf8)this.payload : null);
+          if (this.repo == null) {
+            this.repo = new com.hitachivantara.avro.repoRecord();
+          }
+          this.repo.customDecode(in);
           break;
 
         case 4:
-          this.public$ = in.readBoolean();
+          this.payload = in.readString(this.payload instanceof Utf8 ? (Utf8)this.payload : null);
           break;
 
         case 5:
+          this.public$ = in.readBoolean();
+          break;
+
+        case 6:
           this.created_at = in.readString(this.created_at instanceof Utf8 ? (Utf8)this.created_at : null);
           break;
 
